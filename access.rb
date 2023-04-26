@@ -5,42 +5,42 @@
 class Access < Formula
   desc ""
   homepage "https://indent.com"
-  version "0.10.4"
+  version "0.10.5"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/indentapis/homebrew-access/releases/download/v0.10.4/access_0.10.4_darwin_arm64.zip"
-      sha256 "32270cd0d15b34f1d3ed560b6e974d41f7c57f4f3860b7fbe4364b61af163119"
+    if Hardware::CPU.intel?
+      url "https://github.com/indentapis/access/releases/download/v0.10.5/access_0.10.5_darwin_amd64.zip"
+      sha256 "d3fc8ea5f0ea4402ec4548e6c50ee6b3dda6fbece17795bc68d1c82db0e15f58"
 
       def install
-        bin.install "access_v0.10.4"
+        bin.install "access_v0.10.5"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/indentapis/homebrew-access/releases/download/v0.10.4/access_0.10.4_darwin_amd64.zip"
-      sha256 "77acd1ae9dd64f6cfd42129714b148f7773059103ab3663ff6dbe97ac7b0abe9"
+    if Hardware::CPU.arm?
+      url "https://github.com/indentapis/access/releases/download/v0.10.5/access_0.10.5_darwin_arm64.zip"
+      sha256 "e94e16c8a38978a70364932b2b12d04f50946b19fd46d7184f668ad87a3db36e"
 
       def install
-        bin.install "access_v0.10.4"
+        bin.install "access_v0.10.5"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/indentapis/homebrew-access/releases/download/v0.10.4/access_0.10.4_linux_arm64.zip"
-      sha256 "1c1662bef5b72f79e846c281691aa5c47edee87387ad38461d127597161c6ead"
+      url "https://github.com/indentapis/access/releases/download/v0.10.5/access_0.10.5_linux_arm64.zip"
+      sha256 "81b92b7cdbe144c57badae16bb40d48dba22cd9876e7d8ad36ca0a0337efdba7"
 
       def install
-        bin.install "access_v0.10.4"
+        bin.install "access_v0.10.5"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/indentapis/homebrew-access/releases/download/v0.10.4/access_0.10.4_linux_amd64.zip"
-      sha256 "520aa4f20b5658a58eb78d40b791c063f0f6c096d82b9e33dc5c8dcd9fbe72ef"
+      url "https://github.com/indentapis/access/releases/download/v0.10.5/access_0.10.5_linux_amd64.zip"
+      sha256 "2feff8133d0c6413765831c8eff98091bf5d3aa6a8e4c080db1ffe7f71cf3fb3"
 
       def install
-        bin.install "access_v0.10.4"
+        bin.install "access_v0.10.5"
       end
     end
   end
