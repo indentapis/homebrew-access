@@ -2,8 +2,8 @@ class Access < Formula
   desc "Easiest way to request and grant access without leaving your terminal"
   homepage "https://indent.com"
   url "https://github.com/indentapis/access.git",
-      tag:      "v0.10.8",
-      revision: "a124ea66f8fb8f798de28635458dfe2fb3362bd0"
+      tag:      "v0.10.9",
+      revision: "19955980a9fb76ef294ea19829e0479c37e81898"
   license "Apache-2.0"
   head "https://github.com/indentapis/access.git", branch: "main"
 
@@ -26,7 +26,7 @@ class Access < Formula
     test_file = testpath/"access.yaml"
     test_file.write("")
     Dir.chdir(testpath) do
-      system "#{bin}/access", "config", "set", "space", "some-space"
+      system bin/"access", "config", "set", "space", "some-space"
     end
     assert_equal "space: some-space", File.read(test_file).strip
   end
